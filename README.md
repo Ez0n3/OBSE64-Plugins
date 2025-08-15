@@ -28,6 +28,12 @@ All necessary projects have been migrated to and built with **Visual Studio 2022
 > Currently there does not seem to be a way to create a new function that interfaces with the game using a script. The listener can be used though to execute functions when certain events are detected.
 
   
+> [!TIP]  
+> See Also:  
+> [OBSE](https://github.com/Ez0n3/OBSE-Plugins)  
+> [xOBSE](https://github.com/Ez0n3/xOBSE-Plugins)  
+
+  
 [Back to top](#obse64-plugins)  
   
 ## Construction:  
