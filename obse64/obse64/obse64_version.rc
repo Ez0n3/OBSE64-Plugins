@@ -1,4 +1,4 @@
-#include "obse64_common/obse64_version.h"
+#include "../obse64_common/obse64_version.h" // Changed for VS2020
 
 1 VERSIONINFO
  FILEVERSION 0,OBSE_VERSION_INTEGER,OBSE_VERSION_INTEGER_MINOR,OBSE_VERSION_INTEGER_BETA

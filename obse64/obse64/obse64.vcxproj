@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E904183B-73B9-44C4-83D3-11F5F460CA8D}</ProjectGuid>
+	<ProjectName>obse64</ProjectName>
+    <RootNamespace>obse64</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\..\config\_Plugins.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_$(SeRuntimeVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(SeRuntimeVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;$(SolutionDir)\..\common;$(SolutionDir)\xbyak;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;RUNTIME;RUNTIME_VERSION=$(SeRuntimeVersion);OBSE64_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+	  <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;$(SolutionDir)\..\common;$(SolutionDir)\xbyak;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;RUNTIME;RUNTIME_VERSION=$(SeRuntimeVersion);OBSE64_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\obse64_common\obse64_common.vcxproj">
+      <Project>{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AltarExtraData.cpp" />
+    <ClCompile Include="AltarSync.cpp" />
+    <ClCompile Include="Commands_Console.cpp" />
+    <ClCompile Include="Commands_Input.cpp" />
+    <ClCompile Include="Commands_Inventory.cpp" />
+    <ClCompile Include="Commands_Math.cpp" />
+    <ClCompile Include="Commands_MiscReference.cpp" />
+    <ClCompile Include="Commands_Player.cpp" />
+    <ClCompile Include="CommandTable.cpp" />
+    <ClCompile Include="GameBSExtraData.cpp" />
+    <ClCompile Include="GameConsole.cpp" />
+    <ClCompile Include="GameData.cpp" />
+    <ClCompile Include="GameExtraData.cpp" />
+    <ClCompile Include="GameForms.cpp" />
+    <ClCompile Include="GameObjects.cpp" />
+    <ClCompile Include="GameRTTI.cpp" />
+    <ClCompile Include="GameScript.cpp" />
+    <ClCompile Include="GameTypes.cpp" />
+    <ClCompile Include="Hooks_Data.cpp" />
+    <ClCompile Include="Hooks_Gameplay.cpp" />
+    <ClCompile Include="Hooks_Script.cpp" />
+    <ClCompile Include="Hooks_Version.cpp" />
+    <ClCompile Include="MersenneTwister.cpp" />
+    <ClCompile Include="obse64.cpp" />
+    <ClCompile Include="ParamInfos.cpp" />
+    <ClCompile Include="PluginManager.cpp" />
+    <ClCompile Include="SteamInit.cpp" />
+    <ClCompile Include="UnrealAPI.cpp" />
+    <ClCompile Include="UnrealObject.cpp" />
+    <ClCompile Include="UnrealTypes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AltarExtraData.h" />
+    <ClInclude Include="AltarSync.h" />
+    <ClInclude Include="CommandTable.h" />
+    <ClInclude Include="GameBSExtraData.h" />
+    <ClInclude Include="GameConsole.h" />
+    <ClInclude Include="GameData.h" />
+    <ClInclude Include="GameExtraData.h" />
+    <ClInclude Include="GameForms.h" />
+    <ClInclude Include="GameObjects.h" />
+    <ClInclude Include="GameRTTI.h" />
+    <ClInclude Include="GameScript.h" />
+    <ClInclude Include="GameTypes.h" />
+    <ClInclude Include="Hooks_Data.h" />
+    <ClInclude Include="Hooks_Gameplay.h" />
+    <ClInclude Include="Hooks_Script.h" />
+    <ClInclude Include="Hooks_Version.h" />
+    <ClInclude Include="MersenneTwister.h" />
+    <ClInclude Include="NiTypes.h" />
+    <ClInclude Include="ParamInfos.h" />
+    <ClInclude Include="PluginAPI.h" />
+    <ClInclude Include="PluginManager.h" />
+    <ClInclude Include="SteamInit.h" />
+    <ClInclude Include="STLTypes.h" />
+    <ClInclude Include="UnrealAPI.h" />
+    <ClInclude Include="UnrealObject.h" />
+    <ClInclude Include="UnrealTypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GameRTTI.inl" />
+    <None Include="obse64.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="obse64_version.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
