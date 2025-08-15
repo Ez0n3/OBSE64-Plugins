@@ -10,21 +10,26 @@
   
 Updated: **August 15, 2025**  
   
+This repo contains Plugins for Oblivion Remastered - OBSE64, including a Plugin Example (**Status: Untested**).  
+  
 **OBSE64** is an SDK created by [Ian Patterson](https://github.com/ianpatt), which extends the functionality of **Oblivion Remastered** for mod authors.  
 The original SDK used for building the OBSE64 EXE can be found here: [OBSE64](https://www.nexusmods.com/oblivionremastered/mods/282) [OBSE64 Repo](https://github.com/ianpatt/obse64)  
 Using OBSE64 in your mod will then make OBSE64 a **Dependency** which you must must inform your users of and provide a link to.  
   
-This repo contains Plugins for Oblivion Remastered - OBSE64, including a Plugin Example (**Status: Untested**).  
-  
-This mirror of the SDK is currently set to support Oblivion Remastered runtime: **1.512.105.0 (0x12000690)** - OBSE64 build: **0.0.2.2**, other versions will need to be manually configured.  
+This mirror of the SDK is currently set to support Oblivion Remastered runtime version: **1.512.105.0** - OBSE64 version: **0.0.2.2**, other versions will need to be manually configured.  
 It has also been pre-configured to build **Plugins** and is not intended for building the full EXE (Core and Loader).  
   
 All necessary projects have been migrated to and built with **Visual Studio 2022 (v143)**, which can be downloaded here: [Visual Studio 2020](https://visualstudio.microsoft.com/downloads/)   
   
 > [!IMPORTANT]  
+> The Ez Plugin Example has not been tested yet, but it should work.
+  
+> [!IMPORTANT]  
 > Currently there does not seem to be a way to create a new function that interfaces with the game using a script. The listener can be used though to execute functions when certain events are detected.
 
-
+  
+[Back to top](#obse64-plugins)  
+  
 ## Construction:  
   
 To build plugins, open "OBSE64-Plugins/obse64_plugins" and then open the plugin folder you want to build. EG: **ez_obse64_plugin_example**.  
@@ -53,7 +58,9 @@ Post compile options have been removed for all projects, but can be re-added in-
 > Current SDKs like this one no longer have a "common" folder. What used to be in the common folder is now handled by the SDK core.  
 > As of now, I have not found a way to create and register a new function, perhaps in later versions of the SDK it will be possible.  
 > For now, using the listener can print "Hello World!" when certain events trigger, like when the game is fully loaded.
-
+  
+[Back to top](#obse64-plugins)  
+  
 ## Integration:  
   
 Integrating the example plugin with Oblivion Remastered involves creating a new Plugin Script which interfaces with the plugin dll.  
@@ -66,7 +73,9 @@ For example:
 
 Currently there is no way to add new functions to OBSE64 that can interface with the game scripts at this time.  
 The plugin listener can be used though, if you only need the function to execute when a certain event happens. EG: An event that triggers when the game fully loads
-
+  
+[Back to top](#obse64-plugins)  
+  
 ## Duplication:  
   
 Duplicating the plugin example to make your own plugin is quite easy if you follow these steps:  
@@ -97,7 +106,7 @@ System.Guid.NewGuid().ToString().ToUpper()
  * Replace "ProjectGuid" with the GUID you generated above, this must be unique to the project.  
  * Replace "ProjectName" and "RootNamespace" to your new plugins "short" name. EG:  
 ```
-    <ProjectGuid>{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</ProjectGuid>  
+    <ProjectGuid>{11111111-2222-3333-4444-555555555555}</ProjectGuid>  
     <ProjectName>my_cool_new_plugin</ProjectName>  
     <RootNamespace>my_cool_new_plugin</RootNamespace>  
 ```
@@ -122,9 +131,12 @@ Select your new "my_cool_new_plugin.vcxproj" or "my_cool_new_plugin_lean.vcxproj
 Select a Configuration (Debug or Release) and then Build the solution to test it.  
 After completion, open the ./Builds/Configuration/ folder and there should be your new dll file. EG: **my_cool_new_plugin.dll**  
   
+[Back to top](#obse64-plugins)  
+  
 ## Donation:  
   
 If you enjoy and/or find this content useful, consider [buying me a coffee!](https://www.paypal.com/donate/?hosted_button_id=757K44LRCMVRW) :coffee:  
   
+[Back to top](#obse64-plugins)
 
 
