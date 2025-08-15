@@ -1,0 +1,3 @@
+LIBRARY "ez_obse64_plugin_example"
+EXPORTS
+OBSEPlugin_Load

@@ -1,0 +1,42 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "obse64", "..\..\obse64\obse64\obse64.vcxproj", "{E904183B-73B9-44C4-83D3-11F5F460CA8D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "obse64_common", "..\..\obse64\obse64_common\obse64_common.vcxproj", "{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "obse64-core", "obse64-core", "{6C72AB7F-63FC-48C9-94B2-3E4CA034DD63}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ez_obse64_plugin_example", "ez_obse64_plugin_example.vcxproj", "{052442D9-46B6-4E78-9139-74BBDCAE443D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{052442D9-46B6-4E78-9139-74BBDCAE443D}.Debug|x64.ActiveCfg = Debug|x64
+		{052442D9-46B6-4E78-9139-74BBDCAE443D}.Debug|x64.Build.0 = Debug|x64
+		{052442D9-46B6-4E78-9139-74BBDCAE443D}.Release|x64.ActiveCfg = Release|x64
+		{052442D9-46B6-4E78-9139-74BBDCAE443D}.Release|x64.Build.0 = Release|x64
+		{E904183B-73B9-44C4-83D3-11F5F460CA8D}.Debug|x64.ActiveCfg = Debug|x64
+		{E904183B-73B9-44C4-83D3-11F5F460CA8D}.Debug|x64.Build.0 = Debug|x64
+		{E904183B-73B9-44C4-83D3-11F5F460CA8D}.Release|x64.ActiveCfg = Release|x64
+		{E904183B-73B9-44C4-83D3-11F5F460CA8D}.Release|x64.Build.0 = Release|x64
+		{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC}.Debug|x64.ActiveCfg = Debug|x64
+		{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC}.Debug|x64.Build.0 = Debug|x64
+		{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC}.Release|x64.ActiveCfg = Release|x64
+		{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E904183B-73B9-44C4-83D3-11F5F460CA8D} = {6C72AB7F-63FC-48C9-94B2-3E4CA034DD63}
+		{BD091AC9-0ED0-4958-B5F3-88B5A977E1BC} = {6C72AB7F-63FC-48C9-94B2-3E4CA034DD63}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F611C16-F4BA-4C30-ADAD-9AB152256B8F}
+	EndGlobalSection
+EndGlobal
